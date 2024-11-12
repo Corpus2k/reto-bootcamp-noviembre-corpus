@@ -1,0 +1,31 @@
+{
+    "manifest_version": 3,
+    "name": "Datos de plaza vea",
+    "description": "Extrae la información de cada categoria o todo los productos en general en un solo click. ⚠️ ADVERTENCIA ⚠️: DE PREFERENCIA TIENES QUE ESPERAR QUE CARGUE LA PÁGINA PARA PODER VISIALIZAR TODO LOS PRODUCTOS :D",
+    "version": "2.2",
+    "permissions": ["activeTab", "scripting", "tabs", "storage"],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://www.plazavea.com.pe/*"],
+            "js": ["contentscript.js"]
+        }
+    ],
+    "action": {
+        "default_popup": "popup/index.html",
+        "default_icon": {
+            "16": "jet.png",
+            "32": "jet.png",
+            "48": "jet.png",
+            "128": "jet.png"
+        }
+    },
+    "icons": {
+        "16": "jet.png",
+        "32": "jet.png",
+        "48": "jet.png",
+        "128": "jet.png"
+    }
+}
